@@ -7,10 +7,19 @@ import './App.css';
 const App = () => {
   const [input, setInput] = useState('');
   const [messages, setMessages] = useState([
-    {username: 'Manuel', text: 'Hello'},
-    {username: 'Livia', text: 'Hi'},
+    {username: 'Manuel', message: 'Hello'},
+    {username: 'Livia', message: 'Hi'},
   ]);
   const [username, setUserName] = useState('');
+
+  /**
+   * FIREBASE
+   */
+  // useEffect(() => {
+  //   db.collection('messages').onSnapshot(snapshot => {
+  //     setMessages( snapshot.docs.map( doc => doc.data() ) );
+  //   });
+  // }, [] )
 
   useEffect(() => {
     setUserName( prompt( 'Please enter your name' ) );
@@ -20,7 +29,7 @@ const App = () => {
     // all the logic to send a message
     event.preventDefault();
     setMessages([
-      ...messages, { username: username, text: input },
+      ...messages, { username: username, message: input },
     ]);
     setInput(''); 
   }
@@ -46,7 +55,7 @@ const App = () => {
         </form>
      
         {
-          messages.map(message => (
+          messages.map( message => (
             <Message username={ username } message={ message }/>
           ))
         }
