@@ -7,10 +7,10 @@ import './App.css';
 const App = () => {
   const [input, setInput] = useState('');
   const [messages, setMessages] = useState([
-    {userName: 'Matteo', text: 'Hello'},
-    {userName: 'Livia', text: 'Hi'},
+    {username: 'Manuel', text: 'Hello'},
+    {username: 'Livia', text: 'Hi'},
   ]);
-  const [userName, setUserName] = useState('');
+  const [username, setUserName] = useState('');
 
   useEffect(() => {
     setUserName( prompt( 'Please enter your name' ) );
@@ -20,25 +20,25 @@ const App = () => {
     // all the logic to send a message
     event.preventDefault();
     setMessages([
-      ...messages, { userName: userName, text: input },
+      ...messages, { username: username, text: input },
     ]);
     setInput(''); 
   }
 
   return(
       <div className="App">
-        <h1>Welcome {userName}</h1>
+        <h1>Welcome { username }</h1>
 
         <form>
           <FormControl>
               <InputLabel>Enter a message...</InputLabel>
               <Input value={ input } onChange={event => setInput(event.target.value)} />
               <Button 
-              variant="contained" 
-              color="primary" 
-              disabled={!input} 
-              type="submit" 
-              onClick={ sendMessage }
+                variant="contained" 
+                color="primary" 
+                disabled={ !input } 
+                type="submit" 
+                onClick={ sendMessage }
               >
                   Send message
               </Button>
@@ -47,7 +47,7 @@ const App = () => {
      
         {
           messages.map(message => (
-            <Message userName={ message.userName } text={ message.text }/>
+            <Message username={ username } message={ message }/>
           ))
         }
     </div>
