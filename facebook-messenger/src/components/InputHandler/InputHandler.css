@@ -1,0 +1,75 @@
+.InputHandler {
+    text-align: center;
+    padding: 50px;
+}
+  
+.InputHandler img {
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.InputHandler__form {
+    position: fixed;
+    display: flex;
+    margin: 20px;
+    width: 90%;
+    border-radius: 5px;
+    padding: 15px;
+    background: #e9e9eb;
+    bottom: 0;
+    z-index: 1;
+}
+
+.InputHandler__formControl {
+    display: flex !important;
+    flex-direction: row !important;
+    width: 100%;
+}
+
+.InputHandler__input {
+    flex: 1;
+}
+
+.InputHandler__iconButton {
+    flex: 0;
+}
+
+/* TABLET VIEW */
+@media screen and (min-width: 750px) and (max-width: 990px) {
+    .InputHandler {
+        max-width: 100%;
+        padding: 20px;
+        padding-top: 30px;
+    }
+
+    .InputHandler__form {
+        position: fixed;
+        display: flex;
+        width: 100%;
+        margin: 0.5px;
+        padding: 0px;
+        right: 0px;
+    }
+
+    .InputHandler input[type=text] {
+        padding: 10px;
+    }
+}
+
+/* MOBILE VIEW */
+@media screen and (max-width: 550px) {
+    .InputHandler {
+        padding: 20px;
+    }
+
+    .InputHandler__form {
+        width: 100%;
+        margin: 0.5px;
+        padding: 0px;
+        right: 0px;
+    }
+
+    .InputHandler input[type=text] {
+        padding: 10px;
+    }
+}

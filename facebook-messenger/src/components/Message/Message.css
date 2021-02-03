@@ -1,5 +1,6 @@
 .message {
     width: fit-content;
+    max-width: 100%;
     padding: 10px;
     margin: 10px;
 }
@@ -8,6 +9,7 @@
     margin-left: auto;
     text-align: right !important;
     color: #fff;
+    margin-bottom: 50px;
 }
 
 .message__userCard {
@@ -15,5 +17,17 @@
 }
 
 .message__guestCard {
+    margin-bottom: 50px;
     background-color: #e9e9eb !important;
+}
+
+/* TABLET VIEW */
+@media screen and (min-width: 750px) and (max-width: 990px) {
+    .message__user {    
+        margin-bottom: 30px;
+    }
+   
+    .message__guestCard {
+        margin-bottom: 30px;
+    }
 }

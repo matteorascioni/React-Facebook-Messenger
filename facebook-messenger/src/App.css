@@ -1,19 +1,18 @@
-.App {
-  text-align: center;
+body {
+    width: 1425px;
+    max-width: 1425px;
 }
 
-.App img {
-  max-width: 50px;
-  max-height: 50px;
+@media screen and (min-width: 750px) and (max-width: 990px) {
+    body {
+        width: 750px;
+        max-width: 990px;
+    }
 }
 
-.app__form {
-  position: fixed;
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  margin: 20px;
-  padding: 20px;
-  bottom: 0;
-  z-index: 1;
+@media screen and (max-width: 414px) {
+    body {
+        width: 414px;
+        max-width: 414px;
+    }
 }
