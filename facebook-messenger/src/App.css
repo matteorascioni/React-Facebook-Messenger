@@ -1,6 +1,19 @@
 .App {
-  height: 80vh;
-  display: flex;
-  flex-direction: column;
   text-align: center;
+}
+
+.App img {
+  max-width: 50px;
+  max-height: 50px;
+}
+
+.app__form {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 20px;
+  padding: 20px;
+  bottom: 0;
+  z-index: 1;
 }
